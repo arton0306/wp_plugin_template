@@ -30,7 +30,7 @@ function arton_add_setting_menu() {
     add_options_page("arton page title",
                      "arton menu title",
                      "manage_options",
-                     "arton_heeeello",
+                     "arton_plugin_template_settings",
                      "arton_setting_page",
                      null,
                      66);
@@ -40,7 +40,7 @@ add_action('admin_menu', 'arton_add_setting_menu');
 // test adding an option beside the activate/deactivate links
 function arton_add_action_link ($links) {
     $mylinks = array(
-        '<a href="' . admin_url( 'options-general.php?page=arton_plugin_template' ) . '">Settings</a>',
+        '<a href="' . admin_url( 'options-general.php?page=arton_plugin_template_settings' ) . '">Settings</a>',
     );  
     return array_merge( $links, $mylinks );
 }
